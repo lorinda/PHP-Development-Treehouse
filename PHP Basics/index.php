@@ -2,7 +2,7 @@
 define("YEAR", 2014);
 define("JOB_TITLE", "Teacher");
 define("USE_FULL_NAME", TRUE);
-define("MAX_BADGES", 150000);
+define("MAX_BADGES",20);
 //This is my first name
 
 $first_name = "Hampton";
@@ -25,9 +25,10 @@ elseif($role == "Student"){
   $info = "I am a Student at Treehouse";
 }
 else{
-  $info = "I am just visiting."  
+  $info = "I am just visiting."; 
 }
 
+$social_icons = array("twitter", "facebook", "google");
 ?>
 
 <!DOCTYPE html>
@@ -49,21 +50,23 @@ else{
       <p><?php echo $info ?></p>
       <hr />
       <ul class="social">
-        <li><a href=""><span class="icon twitter"></span></a></li>
+        <?php
+          foreach($social_icons as $icon){
+
+        ?>
+          <li><a href=""><span class="icon <?php echo $icon ?>"></span></a></li>
+        <?php
+          }
+        ?>
       </ul>
     </section>
     <section class="main">
-      <pre><?php
-         $a = 10;
-         $b = 0;
-
-      var_dump($a || $b);
-      var_dump(! $a);//TRUE IF A IS NOT TRUE
-
-      ?>
-      </pre>
       <ul>
-        
+        <?php 
+          for($counter =  0; $counter <= MAX_BADGES; $counter++){
+            echo "<li>" . $counter . "</li>";
+          }
+        ?>
       </ul>
      
     </section>

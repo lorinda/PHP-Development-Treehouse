@@ -8,13 +8,25 @@ define("MAX_BADGES", 150000);
 $first_name = "Hampton";
 $last_name = "Paulk";
 $location = "Orlando, FL";
-$role = "Teacher";
+$role = "Student";
 
 
 if( USE_FULL_NAME == TRUE ){
   $name = $first_name . " " . $last_name;
 }
+else{
+  $name = $first_name;
+}
 
+if($role == "Teacher"){
+  $info = "I am a Teacher at Treehouse";
+}
+elseif($role == "Student"){
+  $info = "I am a Student at Treehouse";
+}
+else{
+  $info = "I am just visiting."  
+}
 
 ?>
 
@@ -34,7 +46,7 @@ if( USE_FULL_NAME == TRUE ){
       <h1><?php echo $name ?></h1>
       <p><?php echo $location ?></p>
       <hr />
-      <p>Welcome to PHP Basics!</p>
+      <p><?php echo $info ?></p>
       <hr />
       <ul class="social">
         <li><a href=""><span class="icon twitter"></span></a></li>

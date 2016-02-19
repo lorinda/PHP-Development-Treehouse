@@ -1,0 +1,12 @@
+{
+    "name": "lorinda/building_websites_with_php",
+    "authors": [
+        {
+            "name": "Lorinda",
+            "email": "lorinda@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.17"
+    }
+}
